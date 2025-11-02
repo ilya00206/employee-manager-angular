@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeeSort } from './employee-sort';
+import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('EmployeeSort', () => {
   let component: EmployeeSort;
@@ -8,9 +9,9 @@ describe('EmployeeSort', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmployeeSort]
-    })
-    .compileComponents();
+      imports: [EmployeeSort],
+      providers: [provideZonelessChangeDetection()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(EmployeeSort);
     component = fixture.componentInstance;

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { provideZonelessChangeDetection } from '@angular/core';
 import { EmployeeForm } from './employee-form';
 
 describe('EmployeeForm', () => {
@@ -8,9 +9,9 @@ describe('EmployeeForm', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EmployeeForm]
-    })
-    .compileComponents();
+      imports: [EmployeeForm],
+      providers: [provideZonelessChangeDetection()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(EmployeeForm);
     component = fixture.componentInstance;

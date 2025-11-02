@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Page } from '../../../../common/components/page/page';
 
 import { Location } from '@angular/common';
-import { CardComponent } from '../../../../common/ui/card/card';
+import { Card } from '../../../../common/components/card/card';
 import { EmployeeFormFooter } from '../../components/employee-form-footer/employee-form-footer';
 import { EmployeeForm } from '../../components/employee-form/employee-form';
 import { Employee } from '../../models/employee';
@@ -29,7 +29,7 @@ function createForm(formBuilder: NonNullableFormBuilder, employee: Employee) {
 
 @Component({
   selector: 'app-update-employee-page',
-  imports: [CardComponent, EmployeeForm, Page, EmployeeFormFooter],
+  imports: [Card, EmployeeForm, Page, EmployeeFormFooter],
   templateUrl: './update-employee-page.html',
   styleUrl: './update-employee-page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

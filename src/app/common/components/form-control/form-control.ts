@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
-import { FormErrorMessage } from "../form-error-message/form-error-message";
+import { FormErrorMessage } from '../form-error-message/form-error-message';
 
 @Component({
   selector: 'app-form-control',
-  templateUrl: './form-control.component.html',
-  styleUrl: './form-control.component.scss',
+  templateUrl: './form-control.html',
+  styleUrl: './form-control.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [FormErrorMessage],
 })
-export class FormControlComponent {
+export class FormControl {
   readonly id = input.required<string>();
   readonly label = input.required<string>();
   readonly control = input.required<AbstractControl>();

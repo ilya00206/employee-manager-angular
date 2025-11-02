@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { NonNullableFormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Page } from '../../../../common/components/page/page';
-import { CardComponent } from '../../../../common/ui/card/card';
+import { Card } from '../../../../common/components/card/card';
 import { EmployeeForm } from '../../components/employee-form/employee-form';
 import { EmployeeAdd, EmployeeAddForm } from '../../models/employee-add';
 import { EmployeeApiService } from '../../services/employee-api.service';
@@ -11,7 +11,7 @@ import { EmployeeFormFooter } from '../../components/employee-form-footer/employ
 
 @Component({
   selector: 'app-add-employee-page',
-  imports: [CardComponent, EmployeeForm, Page, EmployeeFormFooter],
+  imports: [Card, EmployeeForm, Page, EmployeeFormFooter],
   templateUrl: './add-employee-page.html',
   styleUrl: './add-employee-page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

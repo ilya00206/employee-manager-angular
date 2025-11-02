@@ -1,21 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-
-import { Header } from './header';
+import { Main } from './main';
 import { provideZonelessChangeDetection } from '@angular/core';
 
-describe('Header', () => {
-  let component: Header;
-  let fixture: ComponentFixture<Header>;
+describe('Main', () => {
+  let component: Main;
+  let fixture: ComponentFixture<Main>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FormsModule, Header],
+      imports: [Main],
       providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Header);
+    fixture = TestBed.createComponent(Main);
     component = fixture.componentInstance;
 
     await fixture.whenStable();
@@ -25,8 +23,8 @@ describe('Header', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render the app name', () => {
-    const titleElement = fixture.debugElement.query(By.css('.app-name'));
-    expect(titleElement.nativeElement.textContent).toBeTruthy();
+  it('should render a main element with class container and main-content', () => {
+    const mainElement = fixture.debugElement.query(By.css('main.container.main-content'));
+    expect(mainElement).toBeTruthy();
   });
 });

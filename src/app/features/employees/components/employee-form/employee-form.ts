@@ -1,13 +1,14 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { FormControlComponent } from '../../../../common/ui/form-control/form-control.component';
-import { EmployeeAddForm } from '../../models/employee-add';
+
+import { FormControl } from '../../../../common/components/form-control/form-control';
+import { RequiredHelper } from '../../../../common/components/required-helper/required-helper';
 import { genderOptions } from '../../data/gender-options';
-import { RequiredHelper } from '../../../../common/ui/required-helper/required-helper';
+import { EmployeeAddForm } from '../../models/employee-add';
 
 @Component({
   selector: 'app-employee-form',
-  imports: [FormControlComponent, ReactiveFormsModule, RequiredHelper],
+  imports: [FormControl, ReactiveFormsModule, RequiredHelper],
   templateUrl: './employee-form.html',
   styleUrl: './employee-form.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

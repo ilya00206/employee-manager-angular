@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { CardComponent } from '../../../../common/ui/card/card';
+import { Card } from '../../../../common/components/card/card';
 import { Employee } from '../../models/employee';
 import { LucideAngularModule } from 'lucide-angular';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-employee-card, [appEmployeeCard]',
-  imports: [CardComponent, LucideAngularModule, RouterLink],
+  imports: [Card, LucideAngularModule, RouterLink],
   templateUrl: './employee-card.html',
   styleUrl: './employee-card.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
