@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: var(--error-color);
+}

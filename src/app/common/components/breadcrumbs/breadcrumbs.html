@@ -1,0 +1,17 @@
+@if (breadcrumbs(); as breadcrumbs) { @if (breadcrumbs.length > 1) {
+<nav class="breadcrumbs-nav" aria-label="Nawigacja">
+  @for (breadcrumb of breadcrumbs; track breadcrumb.label; let last = $last) { @if (breadcrumb.icon)
+  {
+  <a
+    class="breadcrumbs-link breadcrumbs-icon-link"
+    [routerLink]="breadcrumb.routerLink"
+    [attr.aria-label]="breadcrumb.label"
+  >
+    <lucide-icon [name]="breadcrumb.icon" [size]="'22'" />
+  </a>
+  } @else if (breadcrumb.routerLink) {
+  <a class="breadcrumbs-link" [routerLink]="breadcrumb.routerLink">{{ breadcrumb.label }}</a> }
+  @else { <span class="breadcrumbs-label">{{ breadcrumb.label }}</span> } @if (!last) {
+  <lucide-icon [name]="'chevron-right'" [size]="'22'" />} }
+</nav>
+} }

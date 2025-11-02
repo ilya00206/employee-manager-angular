@@ -1,0 +1,56 @@
+@use '../../../../../styles/_breakpoints.scss' as breakpoints;
+
+.card-content {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoints.respond-to(sm) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+.employee-details {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.data-label {
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  grid-column: 1;
+}
+
+.data-value {
+  margin: 0;
+  font-weight: 600;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  min-width: 0;
+  grid-column: 2;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+
+  @include breakpoints.respond-to(sm) {
+    justify-content: flex-end;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+}

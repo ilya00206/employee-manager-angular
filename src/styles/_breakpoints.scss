@@ -1,0 +1,37 @@
+$breakpoint-xl: 1400px;
+$breakpoint-lg: 1280px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+
+$breakpoint-max-xl: calc($breakpoint-xl - 1px);
+$breakpoint-max-lg: calc($breakpoint-lg - 1px);
+$breakpoint-max-md: calc($breakpoint-md - 1px);
+$breakpoint-max-sm: calc($breakpoint-sm - 1px);
+$breakpoint-max-xs: calc($breakpoint-xs - 1px);
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xl {
+    @media (max-width: $breakpoint-max-xl) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-max-lg) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-max-md) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (max-width: $breakpoint-max-sm) {
+      @content;
+    }
+  } @else if $breakpoint == xs {
+    @media (max-width: $breakpoint-max-xs) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} not found";
+  }
+}

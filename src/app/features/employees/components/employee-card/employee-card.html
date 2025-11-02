@@ -1,0 +1,46 @@
+@if(employee(); as employee) {
+<app-card>
+  <article
+    class="card-content"
+    [attr.aria-label]="'Dane pracownika: ' + employee.firstName + ' ' + employee.lastName"
+  >
+    <dl class="employee-details">
+      <dt class="data-label">Numer ewidencyjny:</dt>
+      <dd class="data-value">{{ employee.employeeId }}</dd>
+
+      <dt class="data-label">Imię:</dt>
+      <dd class="data-value">{{ employee.firstName }}</dd>
+
+      <dt class="data-label">Nazwisko:</dt>
+      <dd class="data-value">{{ employee.lastName }}</dd>
+
+      <dt class="data-label">Płeć:</dt>
+      <dd class="data-value">{{ employee.gender }}</dd>
+    </dl>
+
+    <div
+      class="actions"
+      role="group"
+      aria-label="Akcje dla pracownika {{ employee.firstName }} {{ employee.lastName }}"
+    >
+      <a
+        class="button icon"
+        [routerLink]="[employee.id, 'update']"
+        aria-label="Edytuj dane osoby: {{ employee.firstName }} {{ employee.lastName }}"
+        title="Edytuj"
+      >
+        <lucide-icon name="pencil" aria-hidden="true" />
+      </a>
+      <button
+        type="button"
+        (click)="delete.emit(employee)"
+        aria-label="Usuń osobę: {{ employee.firstName }} {{ employee.lastName }}"
+        title="Usuń"
+        class="icon"
+      >
+        <lucide-icon name="trash" aria-hidden="true" />
+      </button>
+    </div>
+  </article>
+</app-card>
+}

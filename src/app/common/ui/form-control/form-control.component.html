@@ -1,0 +1,8 @@
+<label [for]="id()"
+  >{{ label() }}
+  @if (required()) {
+  <span class="required-mark">*</span>
+  }
+</label>
+<ng-content />
+<app-form-error-message [id]="id()" [control]="control()" />

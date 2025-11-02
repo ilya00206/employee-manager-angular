@@ -1,0 +1,12 @@
+<app-page>
+  <app-card>
+    <app-employee-form [form]="form" (submitEmployee)="onSubmitEmployee()" [formId]="formId" />
+
+    <app-employee-form-footer>
+      <button type="button" (click)="onCancel()" class="button secondary">Cofnij</button>
+      <button [disabled]="!form.valid" type="submit" [attr.form]="formId" class="primary">
+        Dodaj pracownika
+      </button>
+    </app-employee-form-footer>
+  </app-card>
+</app-page>

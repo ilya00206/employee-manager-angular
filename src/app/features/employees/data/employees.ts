@@ -1,0 +1,87 @@
+import { Employee } from '../models/employee';
+import { Gender } from '../models/gender';
+
+export const employees: Employee[] = [
+  { id: 1, employeeId: '00000001', firstName: 'Anna', lastName: 'Nowak', gender: Gender.Female },
+  { id: 2, employeeId: '00000002', firstName: 'Piotr', lastName: 'Kowalski', gender: Gender.Male },
+  {
+    id: 3,
+    employeeId: '00000003',
+    firstName: 'Katarzyna',
+    lastName: 'Wiśniewska',
+    gender: Gender.Female,
+  },
+  { id: 4, employeeId: '00000004', firstName: 'Tomasz', lastName: 'Wójcik', gender: Gender.Male },
+  {
+    id: 5,
+    employeeId: '00000005',
+    firstName: 'Małgorzata',
+    lastName: 'Kowalczyk',
+    gender: Gender.Female,
+  },
+  {
+    id: 6,
+    employeeId: '00000006',
+    firstName: 'Krzysztof',
+    lastName: 'Kamiński',
+    gender: Gender.Male,
+  },
+  {
+    id: 7,
+    employeeId: '00000007',
+    firstName: 'Agnieszka',
+    lastName: 'Lewandowska',
+    gender: Gender.Female,
+  },
+  {
+    id: 8,
+    employeeId: '00000008',
+    firstName: 'Marcin',
+    lastName: 'Zieliński',
+    gender: Gender.Male,
+  },
+  {
+    id: 9,
+    employeeId: '00000009',
+    firstName: 'Barbara',
+    lastName: 'Szymańska',
+    gender: Gender.Female,
+  },
+  { id: 10, employeeId: '00000010', firstName: 'Jan', lastName: 'Woźniak', gender: Gender.Male },
+  {
+    id: 11,
+    employeeId: '00000011',
+    firstName: 'Ewa',
+    lastName: 'Dąbrowska',
+    gender: Gender.Female,
+  },
+  {
+    id: 12,
+    employeeId: '00000012',
+    firstName: 'Andrzej',
+    lastName: 'Kozłowski',
+    gender: Gender.Male,
+  },
+  {
+    id: 13,
+    employeeId: '00000013',
+    firstName: 'Elżbieta',
+    lastName: 'Jankowska',
+    gender: Gender.Female,
+  },
+  { id: 14, employeeId: '00000014', firstName: 'Michał', lastName: 'Mazur', gender: Gender.Male },
+  {
+    id: 15,
+    employeeId: '00000015',
+    firstName: 'Zofia',
+    lastName: 'Kwiatkowska',
+    gender: Gender.Female,
+  },
+  {
+    id: 16,
+    employeeId: '00000016',
+    firstName: 'Paweł',
+    lastName: 'Wojciechowski',
+    gender: Gender.Male,
+  },
+];

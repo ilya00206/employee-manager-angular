@@ -1,0 +1,27 @@
+@use '../../../../../styles/_breakpoints.scss' as breakpoints;
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  @include breakpoints.respond-to(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+app-employee-search,
+app-employee-sort {
+  @include breakpoints.respond-to(xs) {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}

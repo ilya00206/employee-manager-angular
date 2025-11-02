@@ -1,0 +1,6 @@
+<select [id]="'employeeSort'" [(ngModel)]="sort">
+  <option value="">Sortuj po...</option>
+  @for (option of sortOptions; track option.value) {
+  <option [value]="option.value">{{ option.label }}</option>
+  }
+</select>

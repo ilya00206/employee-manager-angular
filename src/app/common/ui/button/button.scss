@@ -1,0 +1,78 @@
+button,
+.button {
+  font-family: inherit;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--foreground-color);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+
+  &.small {
+    padding: 0.25rem 0.5rem;
+    height: 30px;
+  }
+
+  &.primary {
+    color: var(--background-color);
+    background-color: var(--foreground-color);
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: var(--focus-color);
+      }
+
+      &:active {
+        background-color: var(--active-color);
+      }
+    }
+  }
+
+  &.secondary {
+    color: var(--foreground-color);
+    border-color: var(--foreground-color);
+    
+    &:not(:disabled) {
+      transition: background-color 0.2s ease-in-out;
+      &:hover {
+        background-color: var(--focus-secondary-color);
+      }
+
+      &:active {
+        background-color: var(--active-secondary-color);
+      }
+    }
+  }
+
+  &.icon {
+    &:hover {
+      border-color: var(--focus-color);
+    }
+
+    &:active {
+      border-color: var(--active-color);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.icon {
+    padding: 0.5rem;
+  }
+
+  &:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+  }
+}

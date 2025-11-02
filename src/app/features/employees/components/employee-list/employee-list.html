@@ -1,0 +1,9 @@
+@let employeesList = employees(); @if(employeesList.length > 0) {
+<ul>
+  @for (employee of employeesList; track employee.id) {
+  <li appEmployeeCard [employee]="employee" (delete)="delete.emit(employee)"></li>
+  }
+</ul>
+} @else {
+<app-card> Brak pracowników </app-card>
+}

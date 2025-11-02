@@ -1,0 +1,13 @@
+<div class="dialog-content-wrapper">
+  <div class="dialog-header">
+    <h2 class="dialog-title">Uwaga!</h2>
+    <button type="button" class="dialog-close small" (click)="dialogRef.close(false)">
+      <lucide-icon name="x" size="20" aria-hidden="true" title="Zamknij" />
+    </button>
+  </div>
+  <div class="dialog-content">{{ data.message }}</div>
+  <div class="dialog-footer">
+    <button type="button" class="secondary" (click)="dialogRef.close(false)">Anuluj</button>
+    <button type="button" class="primary" (click)="dialogRef.close(true)">Zatwierdź</button>
+  </div>
+</div>

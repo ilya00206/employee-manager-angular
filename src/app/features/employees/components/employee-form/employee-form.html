@@ -1,0 +1,30 @@
+<app-required-helper />
+
+<form class="form" [formGroup]="form()" (ngSubmit)="submitEmployee.emit()" [id]="formId()">
+  <div class="row">
+    <div class="col-12">
+      <app-form-control [label]="'Imię'" [id]="'firstName'" [control]="form().controls.firstName" [required]="true">
+        <input type="text" placeholder="Wpisz imię" id="firstName" formControlName="firstName" />
+      </app-form-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-form-control [label]="'Nazwisko'" [id]="'lastName'" [control]="form().controls.lastName" [required]="true">
+        <input type="text" placeholder="Wpisz nazwisko" id="lastName" formControlName="lastName" />
+      </app-form-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-form-control [label]="'Płeć'" [id]="'gender'" [control]="form().controls.gender" [required]="true">
+        <select id="gender" formControlName="gender" placeholder="Wybierz płeć">
+          <option value="">Wybierz płeć</option>
+          @for (option of genderOptions; track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+          }
+        </select>
+      </app-form-control>
+    </div>
+  </div>
+</form>
