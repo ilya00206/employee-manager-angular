@@ -2,7 +2,8 @@
 
 :host {
   display: block;
-  max-height: calc(100vh - variables.$headerHeight - 20rem);
+  max-height: calc(100vh - variables.$headerHeight - 15rem);
   min-height: 10rem;
   overflow-y: auto;
+  padding-bottom: 0.5rem;
 }
