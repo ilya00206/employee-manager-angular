@@ -1,10 +1,12 @@
 import { inject, Injectable, EnvironmentProviders, Provider } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
+import { APP_NAME } from './app-name';
 
 @Injectable()
 export class AppTitleStrategy extends TitleStrategy {
   private readonly title = inject(Title);
+  private readonly appName = inject(APP_NAME);
 
   override updateTitle(snapshot: RouterStateSnapshot) {
     const title = this.buildTitle(snapshot);
@@ -14,7 +16,7 @@ export class AppTitleStrategy extends TitleStrategy {
   }
 
   private getAppTitle(title: string) {
-    return `${title} - e-Firma`;
+    return `${title} - ${this.appName}`;
   }
 }
 

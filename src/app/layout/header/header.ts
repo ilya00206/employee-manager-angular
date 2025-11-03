@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { APP_NAME } from '@core/app-name';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Header {}
+export class Header {
+  readonly appName = inject(APP_NAME);
+}
