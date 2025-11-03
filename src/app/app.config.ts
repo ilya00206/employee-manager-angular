@@ -8,6 +8,7 @@ import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from 
 
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideFormErrorMessages } from '@core/form-error-messages.config';
+import { provideTitleStrategy } from '@core/title-strategy';
 import { ChevronRight, House, LucideAngularModule, Pencil, Search, Trash, X } from 'lucide-angular';
 import { routes } from './app.routes';
 
@@ -25,5 +26,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       LucideAngularModule.pick({ House, ChevronRight, Trash, Pencil, X, Search })
     ),
+    provideTitleStrategy(),
   ],
 };
