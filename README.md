@@ -19,6 +19,8 @@ Utworzenie aplikacji do zarządzania pracownikami z wykorzystaniem Angulara 20, 
 - Jasmine, Karma
 - Eslint
 - Prettier
+- Lucide Icons
+- Ngxtension
 
 ## Funkcjonalności
 
