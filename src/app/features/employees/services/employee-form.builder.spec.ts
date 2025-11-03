@@ -46,11 +46,11 @@ describe('EmployeeFormBuilder', () => {
       employeeId: '00000001',
       firstName: 'Jan',
       lastName: 'Kowalski',
-      gender: Gender.Female,
+      gender: Gender.Male,
     });
 
     expect(form.controls.firstName.value).toBe('Jan');
     expect(form.controls.lastName.value).toBe('Kowalski');
-    expect(form.controls.gender.value).toBe(Gender.Female);
+    expect(form.controls.gender.value).toBe(Gender.Male);
   });
 });

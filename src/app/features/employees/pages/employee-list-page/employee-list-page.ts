@@ -34,10 +34,11 @@ export class EmployeeListPage {
   private readonly apiService = inject(EmployeeApiService);
   private readonly router = inject(Router);
   private readonly dialog = inject(Dialog);
-  private readonly pageSize = 10;
-  private readonly savedScrollPosition = signal<number>(0);
   private readonly viewportScroller = inject(ViewportScroller);
   private readonly destroyRef = inject(DestroyRef);
+
+  private readonly pageSize = 10;
+  private readonly savedScrollPosition = signal<number>(0);
 
   private readonly queryParams = injectQueryParams();
 

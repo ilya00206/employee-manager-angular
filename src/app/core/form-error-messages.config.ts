@@ -11,11 +11,13 @@ export const formErrorMessagesConfig: ErrorMessages = {
   maxlength: ({ requiredLength }) => `Maksymalna długość to ${requiredLength} znaków`,
 };
 
-export function provideFormErrorMessages(): (EnvironmentProviders | Provider)[] {
+export function provideFormErrorMessages(
+  formErrorMessages: ErrorMessages
+): (EnvironmentProviders | Provider)[] {
   return [
     {
       provide: FORM_ERROR_MESSAGES,
-      useValue: formErrorMessagesConfig,
+      useValue: formErrorMessages,
     },
   ];
 }
