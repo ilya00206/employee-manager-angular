@@ -12,7 +12,7 @@ export class NavigationBack {
   readonly label = input<string>('Cofnij');
   private readonly location = inject(Location);
 
-  onCancel() {
+  onCancel(): void {
     this.location.back();
   }
 }

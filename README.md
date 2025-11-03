@@ -22,6 +22,15 @@ Utworzenie aplikacji do zarządzania pracownikami z wykorzystaniem Angulara 20, 
 - Lucide Icons
 - Ngxtension
 
+## Przeglądarki
+
+Aplikacja została przetestowana na następujących przeglądarkach:
+
+- Chrome
+- Edge
+- Firefox
+- Safari IOS
+
 ## Funkcjonalności
 
 - Widok listy pracowników
@@ -31,13 +40,14 @@ Utworzenie aplikacji do zarządzania pracownikami z wykorzystaniem Angulara 20, 
 - Sortowanie pracowników
 - Wyszukiwanie pracowników
 
-
 ## Dodatkowe funkcjonalności
-- Accessibility
-- Motyw ciemny
 
+- Pokrycie kodu testami ~100%
+- Accessibility
+- Motyw ciemny w zależności od ustawień systemowych
 
 ## Do realizacji w przyszłości
+
 - Obsługa błędów
 - Obsługa loaderów
 - Widok szczegółów pracownika

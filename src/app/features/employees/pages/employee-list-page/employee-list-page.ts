@@ -90,6 +90,7 @@ export class EmployeeListPage {
     if (!isLoading && savedPosition !== 0) {
       setTimeout(() => {
         this.viewportScroller.scrollToPosition([0, savedPosition]);
+        this.savedScrollPosition.set(0);
       });
     }
   }
