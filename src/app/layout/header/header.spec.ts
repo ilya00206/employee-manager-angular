@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
 import { Header } from './header';
-import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Header', () => {
   let component: Header;
@@ -12,7 +11,6 @@ describe('Header', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule, Header],
-      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Header);

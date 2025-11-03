@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { Layout } from './layout';
 import { Main } from './main/main';
-import { provideZonelessChangeDetection } from '@angular/core';
 
 describe('Layout', () => {
   let component: Layout;
@@ -13,7 +12,6 @@ describe('Layout', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Header, Main, Layout],
-      providers: [provideZonelessChangeDetection()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Layout);
