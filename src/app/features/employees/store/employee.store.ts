@@ -1,6 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { Employee } from '../models/employee';
 import { employees } from '../data/employees';
+import { EmployeeUpdate } from '../models/employee-form';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,7 @@ export class EmployeeStore {
     this._employees.update((employees) => [employee, ...employees]);
   }
 
-  updateEmployee(id: number, updatedEmployee: Employee) {
+  updateEmployee(id: number, updatedEmployee: EmployeeUpdate) {
     this._employees.update((employees) =>
       employees.map((e) => (e.id === id ? { ...e, ...updatedEmployee } : e))
     );

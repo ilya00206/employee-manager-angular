@@ -1,5 +1,5 @@
-@use '_variables.scss' as variables;
-@use '_breakpoints.scss' as breakpoints;
+@use 'variables' as variables;
+@use 'breakpoints' as breakpoints;
 
 header {
   position: sticky;

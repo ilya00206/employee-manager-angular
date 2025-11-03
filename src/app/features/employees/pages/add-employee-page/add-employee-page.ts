@@ -7,7 +7,7 @@ import { NavigationBack } from '@common/components/navigation-back/navigation-ba
 import { Page } from '@common/components/page/page';
 import { EmployeeFormFooter } from '../../components/employee-form-footer/employee-form-footer';
 import { EmployeeForm } from '../../components/employee-form/employee-form';
-import { EmployeeAdd } from '../../models/employee-add';
+import { EmployeeAdd } from '../../models/employee-form';
 import { EmployeeApiService } from '../../services/employee-api.service';
 import { EmployeeFormBuilder } from '../../services/employee-form.builder';
 

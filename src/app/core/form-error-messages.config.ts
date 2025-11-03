@@ -7,8 +7,8 @@ export const FORM_ERROR_MESSAGES = new InjectionToken<ErrorMessages>('FORM_ERROR
 
 export const formErrorMessagesConfig: ErrorMessages = {
   required: () => 'Pole wymagane',
-  minlength: ({ requiredLength }) => `Minimalna długość to ${requiredLength} znaków.`,
-  maxlength: ({ requiredLength }) => `Maksymalna długość to ${requiredLength} znaków.`,
+  minlength: ({ requiredLength }) => `Minimalna długość to ${requiredLength} znaków`,
+  maxlength: ({ requiredLength }) => `Maksymalna długość to ${requiredLength} znaków`,
 };
 
 export function provideFormErrorMessages(): (EnvironmentProviders | Provider)[] {

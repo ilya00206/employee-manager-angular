@@ -3,8 +3,8 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { FormControl } from '@common/components/form-control/form-control';
 import { RequiredHelper } from '@common/components/required-helper/required-helper';
+import { EmployeeFormControls } from '@features/employees/models/employee-form';
 import { genderOptions } from '../../data/gender-options';
-import { EmployeeAddForm } from '../../models/employee-add';
 
 @Component({
   selector: 'app-employee-form',
@@ -13,7 +13,7 @@ import { EmployeeAddForm } from '../../models/employee-add';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeForm {
-  readonly form = input.required<FormGroup<EmployeeAddForm>>();
+  readonly form = input.required<FormGroup<EmployeeFormControls>>();
   readonly formId = input.required<string>();
   readonly submitEmployee = output<void>();
 

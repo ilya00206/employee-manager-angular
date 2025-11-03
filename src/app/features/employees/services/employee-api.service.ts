@@ -3,8 +3,8 @@ import { Observable, of } from 'rxjs';
 
 import { ApiResponse } from '@core/api-response';
 import { Employee } from '../models/employee';
-import { EmployeeAdd } from '../models/employee-add';
-import { EmployeeUpdate } from '../models/employee-update';
+import { EmployeeAdd } from '../models/employee-form';
+import { EmployeeUpdate } from '../models/employee-form';
 import { EmployeeStore } from '../store/employee.store';
 import { filterEmployee } from '../utils/filterEmployee';
 import { generateEmployeeId } from '../utils/generateEmployeeId';
