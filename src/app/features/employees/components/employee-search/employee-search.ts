@@ -12,4 +12,9 @@ import { LucideAngularModule } from 'lucide-angular';
 export class EmployeeSearch {
   readonly search = model.required<string>();
   readonly searchSignal = linkedSignal(() => this.search());
+
+  onClearSearch(): void {
+    this.searchSignal.set('');
+    this.search.set('');
+  }
 }

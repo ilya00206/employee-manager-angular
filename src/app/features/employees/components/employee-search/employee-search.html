@@ -9,8 +9,8 @@
       [(ngModel)]="searchSignal"
       [ngModelOptions]="{ standalone: true }"
     />
-    @if(search()) {
-    <button type="button" class="clear-button small" (click)="search.set('')">
+    @if(searchSignal()) {
+    <button type="button" class="clear-button small" (click)="onClearSearch()">
       <lucide-icon name="x" aria-hidden="true" size="20" />
     </button>
     }

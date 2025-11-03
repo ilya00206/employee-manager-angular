@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { provideAppName } from '@core/app-name';
 import { Header } from './header/header';
 import { Layout } from './layout';
 import { Main } from './main/main';
@@ -12,6 +13,7 @@ describe('Layout', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Header, Main, Layout],
+      providers: [provideAppName('Mock App Name')],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Layout);

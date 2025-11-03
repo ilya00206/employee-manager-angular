@@ -6,10 +6,10 @@ import { Employee } from '../models/employee';
 import { EmployeeAdd } from '../models/employee-form';
 import { EmployeeUpdate } from '../models/employee-form';
 import { EmployeeStore } from '../store/employee.store';
-import { filterEmployee } from '../utils/filterEmployee';
-import { generateEmployeeId } from '../utils/generateEmployeeId';
-import { generateId } from '../utils/generateId';
-import { sortEmployee } from '../utils/sortEmployee';
+import { filterEmployee } from '../utils/filter-employee';
+import { generateEmployeeId } from '../utils/generate-employee-id';
+import { generateId } from '../utils/generate-id';
+import { sortEmployee } from '../utils/sort-employee';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +22,7 @@ export class EmployeeApiService {
     sort?: string;
     limit?: number;
   }): Observable<ApiResponse<Employee>> {
-    let data = [...this.employeeStore.employees()];
+    let data = this.employeeStore.employees();
     if (params?.sort) {
       data = sortEmployee(data, params.sort);
     }

@@ -8,13 +8,12 @@ import {
   effect,
   inject,
   linkedSignal,
-  resource,
   signal,
 } from '@angular/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { rxResource, takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterLink } from '@angular/router';
 import { injectQueryParams } from 'ngxtension/inject-query-params';
-import { filter, lastValueFrom, switchMap } from 'rxjs';
+import { filter, switchMap } from 'rxjs';
 
 import { ConfirmDialog } from '@common/components/confirm-dialog/confirm-dialog';
 import { Page } from '@common/components/page/page';
@@ -48,13 +47,13 @@ export class EmployeeListPage {
     this.queryParams()['limit'] ? Number(this.queryParams()['limit']) : this.pageSize
   );
 
-  private readonly employeesResource = resource({
+  private readonly employeesResource = rxResource({
     params: () => ({
       search: this.search(),
       sort: this.sort(),
       limit: this.limit(),
     }),
-    loader: ({ params }) => lastValueFrom(this.apiService.getEmployees(params)),
+    stream: ({ params }) => this.apiService.getEmployees(params),
   });
 
   readonly employees = computed(() => this.employeesResource.value()?.data ?? []);

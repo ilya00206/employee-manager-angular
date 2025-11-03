@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
+import { provideAppName } from '@core/app-name';
 import { Header } from './header';
 
 describe('Header', () => {
@@ -11,6 +12,7 @@ describe('Header', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule, Header],
+      providers: [provideAppName('Mock App Name')],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Header);
