@@ -6,7 +6,6 @@ import {
 } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
-import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideAppName } from '@core/app-name';
 import { provideFormErrorMessages } from '@core/form-error-messages.config';
 import { provideTitleStrategy } from '@core/title-strategy';
@@ -22,7 +21,6 @@ export const appConfig: ApplicationConfig = {
       withComponentInputBinding(),
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
     ),
-    provideHttpClient(withFetch()),
     provideFormErrorMessages(),
     importProvidersFrom(
       LucideAngularModule.pick({ House, ChevronRight, Trash, Pencil, X, Search })
