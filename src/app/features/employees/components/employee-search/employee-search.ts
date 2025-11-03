@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-employee-search',
-  imports: [FormsModule],
+  imports: [FormsModule, LucideAngularModule],
   templateUrl: './employee-search.html',
   styleUrl: './employee-search.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

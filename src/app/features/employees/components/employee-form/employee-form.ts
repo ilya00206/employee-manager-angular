@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
-import { FormControl } from '../../../../common/components/form-control/form-control';
-import { RequiredHelper } from '../../../../common/components/required-helper/required-helper';
+import { FormControl } from '@common/components/form-control/form-control';
+import { RequiredHelper } from '@common/components/required-helper/required-helper';
 import { genderOptions } from '../../data/gender-options';
 import { EmployeeAddForm } from '../../models/employee-add';
 
@@ -10,7 +10,6 @@ import { EmployeeAddForm } from '../../models/employee-add';
   selector: 'app-employee-form',
   imports: [FormControl, ReactiveFormsModule, RequiredHelper],
   templateUrl: './employee-form.html',
-  styleUrl: './employee-form.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeForm {

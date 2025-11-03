@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-employee-form-footer',
@@ -6,6 +6,4 @@ import { ChangeDetectionStrategy, Component, ElementRef, viewChild } from '@angu
   styleUrl: './employee-form-footer.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EmployeeFormFooter {
-  readonly footer = viewChild<ElementRef>('footer');
-}
+export class EmployeeFormFooter {}

@@ -1,4 +1,5 @@
-@use '../../../styles/_variables.scss' as variables;
+@use '_variables.scss' as variables;
+@use '_breakpoints.scss' as breakpoints;
 
 header {
   position: sticky;
@@ -21,11 +22,11 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 5px 0;
+  padding: 0.5rem 0;
   min-height: variables.$headerHeight;
 }
 
-@media (min-width: 768px) {
+@media (min-width: breakpoints.$breakpoint-md) {
   .header-content {
     justify-content: space-between;
   }

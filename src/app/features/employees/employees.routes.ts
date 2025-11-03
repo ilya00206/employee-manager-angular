@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { Breadcrumbs } from '../../common/components/breadcrumbs/breadcrumb.model';
+import { Breadcrumbs } from '@common/components/breadcrumbs/breadcrumb.model';
 import { AddEmployeePage } from './pages/add-employee-page/add-employee-page';
 import { EmployeeListPage } from './pages/employee-list-page/employee-list-page';
 import { UpdateEmployeePage } from './pages/update-employee-page/update-employee-page';

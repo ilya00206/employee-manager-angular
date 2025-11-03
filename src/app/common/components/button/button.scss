@@ -4,7 +4,7 @@ button,
   height: 40px;
   border: none;
   background: transparent;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   font-size: 1rem;
   line-height: 1.5;
   border: 1px solid transparent;
@@ -39,7 +39,7 @@ button,
   &.secondary {
     color: var(--foreground-color);
     border-color: var(--foreground-color);
-    
+
     &:not(:disabled) {
       transition: background-color 0.2s ease-in-out;
       &:hover {

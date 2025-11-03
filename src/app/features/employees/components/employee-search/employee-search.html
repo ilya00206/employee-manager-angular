@@ -1,1 +1,13 @@
-<input id="employeeSearch" type="text" placeholder="Wyszukaj po imieniu i nazwisku" [(ngModel)]="search" />
+<lucide-icon class="search-icon" name="search" aria-hidden="true" size="20" />
+<input
+  id="employeeSearch"
+  class="search-input"
+  type="text"
+  placeholder="Wyszukaj po imieniu i nazwisku"
+  [(ngModel)]="search"
+/>
+@if(search()) {
+<button type="button" class="clear-button small" (click)="search.set('')">
+  <lucide-icon name="x" aria-hidden="true" size="20" />
+</button>
+}

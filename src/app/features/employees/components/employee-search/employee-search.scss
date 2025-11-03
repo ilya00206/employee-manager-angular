@@ -1,5 +1,28 @@
 :host {
   display: block;
-  max-width: 300px;
+  max-width: 310px;
   width: 100%;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.5rem;
+  margin-top: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--foreground-color-secondary);
+}
+
+.clear-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--foreground-color-secondary);
+}
+
+.search-input {
+  padding-left: 2rem;
+  padding-right: 3rem;
 }

@@ -17,7 +17,7 @@ export class EmployeeStore {
   }
 
   addEmployee(employee: Employee) {
-    this._employees.update((employees) => [...employees, employee]);
+    this._employees.update((employees) => [employee, ...employees]);
   }
 
   updateEmployee(id: number, updatedEmployee: Employee) {

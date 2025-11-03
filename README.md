@@ -19,3 +19,24 @@ Utworzenie aplikacji do zarządzania pracownikami z wykorzystaniem Angulara 20, 
 - Jasmine, Karma
 - Eslint
 - Prettier
+
+## Funkcjonalności
+
+- Widok listy pracowników
+- Dodawanie pracownika
+- Edycja pracownika
+- Usuwanie pracownika
+- Sortowanie pracowników
+- Wyszukiwanie pracowników
+
+
+## Dodatkowe funkcjonalności
+- Accessibility
+- Motyw ciemny
+
+
+## Do realizacji w przyszłości
+- Obsługa błędów
+- Obsługa loaderów
+- Widok szczegółów pracownika
+- Powiadomienia systemowe

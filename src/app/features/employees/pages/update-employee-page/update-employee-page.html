@@ -3,7 +3,7 @@
     <app-employee-form [form]="form()" (submitEmployee)="onSubmitEmployee()" [formId]="formId" />
 
     <app-employee-form-footer>
-      <button type="button" (click)="onCancel()" class="button secondary">Cofnij</button>
+      <app-navigation-back />
       <button [disabled]="!form().valid" type="submit" [attr.form]="formId" class="primary">
         Edytuj pracownika
       </button>

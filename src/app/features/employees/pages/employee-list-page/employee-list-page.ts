@@ -4,17 +4,20 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  DestroyRef,
   effect,
   inject,
   linkedSignal,
   resource,
   signal,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router, RouterLink } from '@angular/router';
 import { injectQueryParams } from 'ngxtension/inject-query-params';
 import { filter, lastValueFrom, switchMap } from 'rxjs';
-import { ConfirmDialog } from '../../../../common/components/confirm-dialog/confirm-dialog';
-import { Page } from '../../../../common/components/page/page';
+
+import { ConfirmDialog } from '@common/components/confirm-dialog/confirm-dialog';
+import { Page } from '@common/components/page/page';
 import { EmployeeList } from '../../components/employee-list/employee-list';
 import { EmployeeSearch } from '../../components/employee-search/employee-search';
 import { EmployeeSort } from '../../components/employee-sort/employee-sort';
@@ -35,6 +38,7 @@ export class EmployeeListPage {
   private readonly pageSize = 10;
   private readonly savedScrollPosition = signal<number>(0);
   private readonly viewportScroller = inject(ViewportScroller);
+  private readonly destroyRef = inject(DestroyRef);
 
   private readonly queryParams = injectQueryParams();
 
@@ -66,11 +70,13 @@ export class EmployeeListPage {
     const dialogRef = this.dialog.open<string>(ConfirmDialog, {
       width: '300px',
       data: { message: 'Czy na pewno chcesz usunąć tego pracownika?' },
+      autoFocus: '.autofocus',
     });
     dialogRef.closed
       .pipe(
         filter(Boolean),
-        switchMap(() => this.apiService.deleteEmployee(employee.id))
+        switchMap(() => this.apiService.deleteEmployee(employee.id)),
+        takeUntilDestroyed(this.destroyRef)
       )
       .subscribe(() => this.employeesResource.reload());
   }

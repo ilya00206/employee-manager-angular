@@ -12,6 +12,8 @@ export const routes: Routes = [
         redirectTo: 'employees',
         pathMatch: 'full',
       },
+
+      // można by było zrobić preloading dla tej ścieżki
       {
         path: 'employees',
         loadChildren: () => import('./features/employees/employees.routes'),
