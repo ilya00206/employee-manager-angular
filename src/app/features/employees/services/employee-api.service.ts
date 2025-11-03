@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { ApiResponse } from '../../../core/api-response';
+import { ApiResponse } from '@core/api-response';
 import { Employee } from '../models/employee';
 import { EmployeeAdd } from '../models/employee-add';
 import { EmployeeUpdate } from '../models/employee-update';

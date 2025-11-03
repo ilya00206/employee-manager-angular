@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { AbstractControl } from '@angular/forms';
+import { FORM_ERROR_MESSAGES } from '@core/form-error-messages.config';
 import { map, switchMap } from 'rxjs/operators';
-import { FORM_ERROR_MESSAGES } from '../../../core/form-error-messages.config';
 
 type ErrorMessage = string;
 

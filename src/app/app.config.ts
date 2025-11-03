@@ -7,9 +7,9 @@ import {
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideFormErrorMessages } from '@core/form-error-messages.config';
 import { ChevronRight, House, LucideAngularModule, Pencil, Search, Trash, X } from 'lucide-angular';
 import { routes } from './app.routes';
-import { provideFormErrorMessages } from './core/form-error-messages.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [
