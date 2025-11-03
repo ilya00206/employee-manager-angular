@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, model } from '@angular/core';
+import { ChangeDetectionStrategy, Component, linkedSignal, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LucideAngularModule } from 'lucide-angular';
 
@@ -11,4 +11,5 @@ import { LucideAngularModule } from 'lucide-angular';
 })
 export class EmployeeSearch {
   readonly search = model.required<string>();
+  readonly searchSignal = linkedSignal(() => this.search());
 }

@@ -1,13 +1,20 @@
-<lucide-icon class="search-icon" name="search" aria-hidden="true" size="20" />
-<input
-  id="employeeSearch"
-  class="search-input"
-  type="text"
-  placeholder="Wyszukaj po imieniu i nazwisku"
-  [(ngModel)]="search"
-/>
-@if(search()) {
-<button type="button" class="clear-button small" (click)="search.set('')">
-  <lucide-icon name="x" aria-hidden="true" size="20" />
-</button>
-}
+<form ngForm (ngSubmit)="search.set(searchSignal())">
+  <div class="search-input-wrapper">
+    <lucide-icon class="search-icon" name="search" aria-hidden="true" size="20" />
+    <input
+      id="employeeSearch"
+      class="search-input"
+      type="text"
+      placeholder="Wyszukaj po imieniu i nazwisku"
+      [(ngModel)]="searchSignal"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    @if(search()) {
+    <button type="button" class="clear-button small" (click)="search.set('')">
+      <lucide-icon name="x" aria-hidden="true" size="20" />
+    </button>
+    }
+  </div>
+
+  <button type="submit" class="button primary">Szukaj</button>
+</form>

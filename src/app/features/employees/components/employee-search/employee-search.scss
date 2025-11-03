@@ -1,4 +1,9 @@
-:host {
+form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.search-input-wrapper {
   display: block;
   max-width: 310px;
   width: 100%;

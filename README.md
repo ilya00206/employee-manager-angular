@@ -42,3 +42,4 @@ Utworzenie aplikacji do zarządzania pracownikami z wykorzystaniem Angulara 20, 
 - Obsługa loaderów
 - Widok szczegółów pracownika
 - Powiadomienia systemowe
+- Logging
