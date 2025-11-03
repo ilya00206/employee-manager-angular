@@ -1,0 +1,8 @@
+@use 'variables' as variables;
+
+:host {
+  display: block;
+  max-height: calc(100vh - variables.$headerHeight - 20rem);
+  min-height: 10rem;
+  overflow-y: auto;
+}

@@ -11,6 +11,7 @@ import { genderOptions } from '../../data/gender-options';
   imports: [FormControl, ReactiveFormsModule, RequiredHelper],
   templateUrl: './employee-form.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './employee-form.scss',
 })
 export class EmployeeForm {
   readonly form = input.required<FormGroup<EmployeeFormControls>>();

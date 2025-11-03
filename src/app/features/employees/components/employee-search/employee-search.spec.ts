@@ -29,7 +29,7 @@ describe('EmployeeSearch', () => {
 
   it('should have correct placeholder text', () => {
     const searchInput = fixture.debugElement.query(By.css('#employeeSearch'));
-    expect(searchInput.nativeElement.placeholder).toBe('Wyszukaj po imieniu i nazwisku');
+    expect(searchInput.nativeElement.placeholder).toBe('Szukaj po imieniu i nazwisku');
   });
 
   it('should render search button', () => {

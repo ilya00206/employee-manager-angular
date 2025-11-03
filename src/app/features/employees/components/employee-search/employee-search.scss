@@ -6,10 +6,15 @@ form {
   align-items: center;
 }
 .search-input-wrapper {
+  flex-shrink: 0;
   display: block;
   max-width: 310px;
   width: 100%;
   position: relative;
+
+  @include breakpoints.respond-to(md) {
+    flex-shrink: 1;
+  }
 
   @include breakpoints.respond-to(xs) {
     max-width: none;
