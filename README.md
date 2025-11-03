@@ -42,7 +42,7 @@ Aplikacja została przetestowana na następujących przeglądarkach:
 
 ## Dodatkowe funkcjonalności
 
-- Pokrycie kodu testami ~100%
+- Pokrycie kodu testami ~95%
 - Accessibility
 - Motyw ciemny w zależności od ustawień systemowych
 
